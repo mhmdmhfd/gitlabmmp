@@ -153,6 +153,7 @@ global:
       autoLinkUser: ["openid_connect"]
       providers:
         - secret: openid-connect
+          key: provider
 {% if dsc.global.backup.s3.enabled %}
     backups:
       bucket: <path:{{ vaultinfra_kv_name }}/data/env/{{ dsc_name }}/apps/global/values#backup | jsonPath {.s3BucketName}>
