@@ -1,0 +1,10 @@
+apiVersion: project.openshift.io/v1
+kind: Project
+metadata:
+  name: test-argo-project
+  labels:
+    app.kubernetes.io/managed-by: manual-test
+    purpose: validation
+spec:
+  finalizers:
+    - kubernetes
